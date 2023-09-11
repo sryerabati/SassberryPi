@@ -1,6 +1,8 @@
 from pygame import mixer
 import time
 global sound, equals
+import random
+
 
 class Soundy:
     def __init__(self):
@@ -201,3 +203,8 @@ class Soundy:
         time.sleep(1)
         endnumba = int(endnumba)
         self.playSound(endnumba)
+    def insult(self):
+        randnum = random.randint(1,16)
+        filename = 'sounds/insults/Insult'+str(randnum)+'.wav'
+        remark = mixer.Sound(filename)
+        remark.play()

@@ -18,7 +18,7 @@ pin0 = 0
 pinPlus = "+"
 pinMinus = "-"
 pinMultiply = "*"
-pinDivide = "÷     "
+pinDivide = "÷"
 pinEquals = "="
 
 firstNum = ""
@@ -210,13 +210,15 @@ while x:
 if add:
   print(int(int(firstNum) + int(secondNum)))
   noisy.makeNoise(int(firstNum), "+", int(secondNum), int(int(firstNum) + int(secondNum)))
-if subtract:
+elif subtract:
   print(int(int(firstNum) - int(secondNum)))
   noisy.makeNoise(int(firstNum), "-", int(secondNum), int(int(firstNum) - int(secondNum)))
-if multiply:
+elif multiply:
   print(int(int(firstNum) * int(secondNum)))
   noisy.makeNoise(int(firstNum), "*", int(secondNum), int(int(firstNum) * int(secondNum)))
-if divide:
+elif divide:
   print(int(int(firstNum) / int(secondNum)))
   noisy.makeNoise(int(firstNum), "/", int(secondNum), int(int(firstNum) / int(secondNum)))
 
+time.sleep(1.2)
+noisy.insult()
